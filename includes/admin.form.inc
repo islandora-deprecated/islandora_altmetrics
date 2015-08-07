@@ -22,8 +22,8 @@ function islandora_altmetrics_admin_form($form, $form_settings) {
   );
   $form['islandora_altmetrics_doi_xpath'] = array(
     '#type' => 'textfield',
-    '#title' => t('DOI xpath'),
-    '#description' => t('MODS xpath for retrieving the DOI.'),
+    '#title' => t('DOI XPath'),
+    '#description' => t('MODS XPath for retrieving the DOI.'),
     '#default_value' => variable_get('islandora_altmetrics_doi_xpath', '/mods:mods/mods:identifier[@type="doi"]'),
   );
   return system_settings_form($form);
