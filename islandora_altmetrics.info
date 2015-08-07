@@ -3,4 +3,5 @@ version = 7.x-dev
 core = 7.x
 description = Islandora Altmetrics integration.
 dependencies[] = islandora
+dependencies[] = islandora_scholar
 package = Islandora Tools
