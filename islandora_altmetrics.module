@@ -43,7 +43,6 @@ function islandora_altmetrics_block_view($delta) {
       }
 
       // Embed Altmetrics.
-      $to_render['subject'] = t('Altmetrics');
       $to_render['content']['altmetrics'] = array(
         '#type' => 'container',
         '#attributes' => array(
