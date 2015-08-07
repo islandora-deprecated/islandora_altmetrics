@@ -3,3 +3,34 @@
  * @file
  * Main hooks for Islandora Altmentrics.
  */
+
+/**
+ * Implements hook_block_info().
+ */
+function islandora_altmetrics_block_info() {
+  return array(
+    'islandora_altmetrics_altmetrics' => array(
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => 'islandora/object/*',
+      'cache' => DRUPAL_NO_CACHE,
+      'info' => t('Islandora Altmetrics'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function islandora_altmetrics_block_view($delta) {
+  $to_render = array();
+
+  switch ($delta) {
+    case 'islandora_altmetrics_altmetrics':
+      $to_render['subject'] = t('Altmetrics');
+      $to_render['content'] = array(
+        '#markup' => '@todo: content',
+      );
+      break;
+  }
+  return $to_render;
+}
