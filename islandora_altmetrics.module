@@ -11,6 +11,7 @@ function islandora_altmetrics_menu() {
   return array(
     'admin/islandora/tools/altmetrics' => array(
       'title' => 'Islandora Altmetrics Configuration',
+      'description' => 'Configure Altmetrics integration.'
       'page callback' => 'drupal_get_form',
       'page arguments' => array('islandora_altmetrics_admin_form'),
       'access arguments' => array('administer site configuration'),
