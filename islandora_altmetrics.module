@@ -53,7 +53,9 @@ function islandora_altmetrics_block_view($delta) {
       $doc->loadXML($object['MODS']->content);
       $xpath = new DOMXPath($doc);
       $xpath->registerNamespace('mods', 'http://www.loc.gov/mods/v3');
-      $xpath_results = $xpath->query('/mods:mods/mods:identifier[@type="doi"]');
+      $xpath_results = $xpath->query(
+        variable_get('islandora_altmetrics_doi_xpath', '/mods:mods/mods:identifier[@type="doi"]')
+      );
       $doi = $xpath_results->item(0)->nodeValue;
       if (!$doi) {
         return;
@@ -64,8 +66,9 @@ function islandora_altmetrics_block_view($delta) {
         '#type' => 'container',
         '#attributes' => array(
           'class' => array('altmetric-embed'),
-          'data-badge-type' => variable_get('islandor_altmetrics_badge', '4'),
+          'data-badge-type' => variable_get('islandora_altmetrics_badge', '4'),
           'data-doi' => $doi,
+          'data-badge-popover' => variable_get('islandora_altmetrics_popover', 'right'),
           'data-hide-no-mentions' => 'true',
         ),
       );

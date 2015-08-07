@@ -8,5 +8,10 @@
  * Implements hook_uninstall().
  */
 function islandora_altmetrics_uninstall() {
-  variable_del('islandor_altmetrics_badge');
+  $vars = array(
+    'islandora_altmetrics_badge',
+    'islandora_altmetrics_popover',
+    'islandora_altmetrics_xpath',
+  );
+  array_walk($vars, 'variable_del');
 }
