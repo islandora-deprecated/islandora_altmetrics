@@ -4,6 +4,8 @@
 
 Islandora Altmetrics integration.
 
+Uses [Altmetrics](http://api.altmetric.com/) before using this module one should familiarize oneself with the licensing.
+
 ## Requirements
 
 This module requires the following modules/libraries:
