@@ -11,7 +11,7 @@ function islandora_altmetrics_menu() {
   return array(
     'admin/islandora/tools/altmetrics' => array(
       'title' => 'Islandora Altmetrics Configuration',
-      'description' => 'Configure Altmetrics integration.'
+      'description' => 'Configure Altmetrics integration.',
       'page callback' => 'drupal_get_form',
       'page arguments' => array('islandora_altmetrics_admin_form'),
       'access arguments' => array('administer site configuration'),
@@ -64,7 +64,7 @@ function islandora_altmetrics_block_view($delta) {
         '#type' => 'container',
         '#attributes' => array(
           'class' => array('altmetric-embed'),
-          'data-badge-type' => variable_get('islandor_altmetrics_badge', 'donut'),
+          'data-badge-type' => variable_get('islandor_altmetrics_badge', '4'),
           'data-doi' => $doi,
           'data-hide-no-mentions' => 'true',
         ),
