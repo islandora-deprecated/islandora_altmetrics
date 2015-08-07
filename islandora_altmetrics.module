@@ -5,6 +5,22 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function islandora_altmetrics_menu() {
+  return array(
+    'admin/islandora/tools/altmetrics' => array(
+      'title' => 'Islandora Altmetrics Configuration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('islandora_altmetrics_admin_form'),
+      'access arguments' => array('administer site configuration'),
+      'type' => MENU_NORMAL_ITEM,
+      'file' => 'includes/admin.form.inc',
+    ),
+  );
+}
+
+/**
  * Implements hook_block_info().
  */
 function islandora_altmetrics_block_info() {
@@ -47,8 +63,9 @@ function islandora_altmetrics_block_view($delta) {
         '#type' => 'container',
         '#attributes' => array(
           'class' => array('altmetric-embed'),
-          'data-badge-type' => 'donut',
+          'data-badge-type' => variable_get('islandor_altmetrics_badge', 'donut'),
           'data-doi' => $doi,
+          'data-hide-no-mentions' => 'true',
         ),
       );
       drupal_add_js('https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js', 'external');
