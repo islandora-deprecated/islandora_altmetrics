@@ -66,7 +66,7 @@ function islandora_altmetrics_block_view($delta) {
         '#type' => 'container',
         '#attributes' => array(
           'class' => array('altmetric-embed'),
-          'data-badge-type' => variable_get('islandora_altmetrics_badge', '4'),
+          'data-badge-type' => variable_get('islandora_altmetrics_badge', 'Default'),
           'data-doi' => $doi,
           'data-badge-popover' => variable_get('islandora_altmetrics_popover', 'right'),
           'data-hide-no-mentions' => 'true',

@@ -12,7 +12,7 @@ function islandora_altmetrics_admin_form($form, $form_settings) {
     '#type' => 'textfield',
     '#title' => t('Altmetrics Badge'),
     '#description' => t('Name of the badge style to use when displaying the Altmetrics information.'),
-    '#default_value' => variable_get('islandora_altmetrics_badge', '4'),
+    '#default_value' => variable_get('islandora_altmetrics_badge', 'Default'),
   );
   $form['islandora_altmetrics_popover'] = array(
     '#type' => 'textfield',
