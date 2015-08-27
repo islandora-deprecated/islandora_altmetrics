@@ -1,10 +1,10 @@
-# Islandora Altmetrics
+# Islandora Altmetrics [![Build Status](https://travis-ci.org/Islandora/islandora_altmetrics.png?branch=7.x)](https://travis-ci.org/Islandora/islandora_altmetrics)
 
 ## Introduction
 
 Islandora Altmetrics integration.
 
-Uses [Altmetrics](http://api.altmetric.com/) before using this module one should familiarize oneself with the licensing.
+This modules uses the [Altmetrics API](http://api.altmetric.com/). Before using this module one should familiarize oneself with the licensing.
 
 ## Requirements
 
