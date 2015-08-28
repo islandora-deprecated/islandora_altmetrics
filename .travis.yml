@@ -28,6 +28,6 @@ before_install:
   - drush -u 1 en --yes islandora_scholar islandora_altmetrics
 script:
   - $ISLANDORA_DIR/tests/scripts/line_endings.sh sites/all/modules/islandora_altmetrics
-  - drush dcs sites/all/modules/islandora_altmetrics
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer sites/all/modules/islandora_altmetrics
   - phpcpd --names *.module,*.inc,*.test,*.php sites/all/modules/islandora_altmetrics
   - drush test-run --uri=http://localhost:8081 "Islandora Altmetrics"
