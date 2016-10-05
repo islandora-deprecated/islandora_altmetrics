@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Islandora Altmetrics integration.
+Islandora Altmetrics provides Altmetrics integration on citation objects as provided by [Islandora Scholar](https://github.com/Islandora/islandora_scholar).
 
 This modules uses the [Altmetrics API](http://api.altmetric.com/). Before using this module one should familiarize oneself with the licensing.
 
@@ -11,6 +11,7 @@ This modules uses the [Altmetrics API](http://api.altmetric.com/). Before using 
 This module requires the following modules/libraries:
 
 * [Islandora](https://github.com/islandora/islandora)
+* [Islandora Scholar](https://github.com/Islandora/islandora_scholar)
 * [Tuque](https://github.com/islandora/tuque)
 
 ## Installation
