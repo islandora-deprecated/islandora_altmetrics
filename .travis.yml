@@ -33,5 +33,4 @@ before_script:
 script:
   - $ISLANDORA_DIR/tests/scripts/line_endings.sh sites/all/modules/islandora_altmetrics
   - drush coder-review --reviews=production,security,style,i18n,potx,sniffer sites/all/modules/islandora_altmetrics
-  - phpcpd --names *.module,*.inc,*.test,*.php sites/all/modules/islandora_altmetrics  
-  - php scripts/run-tests.sh --php `phpenv which php` --url http://localhost:8081 --verbose "Islandora Altmetrics"
+  - phpcpd --names *.module,*.inc,*.test,*.php sites/all/modules/islandora_altmetrics  "
