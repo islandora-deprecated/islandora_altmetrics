@@ -1,5 +1,5 @@
 name = Islandora Altmetrics
-version = 7.x-1.9RC2
+version = 7.x-1.9
 core = 7.x
 description = Islandora Altmetrics integration.
 dependencies[] = islandora
