@@ -1,7 +1,6 @@
-name = Islandora Altmetrics
-version = 7.x-dev
+name = Islandora Badges
 core = 7.x
-description = Islandora Altmetrics integration.
+description = Islandora Badges integration.
 dependencies[] = islandora
 dependencies[] = islandora_scholar
 package = Islandora Tools
